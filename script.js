@@ -76,16 +76,19 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
   }
 })();
 
-/* ---- Expandable project sheets ---- */
+/* ---- Flip cards ---- */
 
 (function () {
-  var toggles = document.querySelectorAll('.sheet-toggle');
-  toggles.forEach(function (btn) {
+  if (prefersReducedMotion) return;
+
+  var buttons = document.querySelectorAll('.card-flip-btn');
+  buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      var target = document.getElementById(btn.getAttribute('aria-controls'));
-      if (target) target.classList.toggle('open', !expanded);
+      var card = btn.closest('.project-card');
+      if (!card) return;
+      var flipped = card.classList.toggle('is-flipped');
+      btn.setAttribute('aria-pressed', String(flipped));
+      btn.textContent = flipped ? 'Back' : 'Flip';
     });
   });
 })();
@@ -93,7 +96,7 @@ var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
 /* ---- Scroll-triggered reveal ---- */
 
 (function () {
-  var revealEls = document.querySelectorAll('.sheet, .sevenseg-figure');
+  var revealEls = document.querySelectorAll('.project-card');
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
     revealEls.forEach(function (el) { el.classList.add('in-view'); });

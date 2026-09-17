@@ -12,8 +12,6 @@
 </head>
 <body>
 
-<div class="grid-bg" aria-hidden="true"></div>
-
 <div class="corner-tab">REV A</div>
 
 <header class="hero">
@@ -73,121 +71,117 @@
     <div class="wrap">
       <h2 class="section-label">Projects</h2>
 
-      <figure class="sevenseg-figure">
-        <div class="sevenseg-display" aria-hidden="true">
-          <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
-          <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
-          <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
-          <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
-          <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
-          <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
-        </div>
-        <div class="sevenseg-controls">
-          <button type="button" id="sevenseg-toggle" aria-label="Pause display">Pause</button>
-          <figcaption>Fig. 2 &middot; GO FSU display, recreated from the Verilog original in Sheet 03</figcaption>
-        </div>
-      </figure>
+      <div class="projects-grid">
 
-      <article class="sheet">
-        <button class="sheet-toggle" id="toggle-01" aria-expanded="false" aria-controls="more-01">
-          <span class="sheet-num">Sheet 01</span>
-          <span class="sheet-chevron" aria-hidden="true"></span>
-        </button>
-        <div class="sheet-body">
-          <h3>Closed-Loop Thermal Fan Controller</h3>
-          <p class="sheet-summary">A fan controller that reads ambient temperature and holds it to a setpoint, built the way an HVAC system would be.</p>
-          <div class="sheet-more" id="more-01">
-            <div class="sheet-more-inner">
-              <p class="sheet-detail">A DHT11 sensor feeds live temperature readings to the controller, which drives a fan through PWM to hold a target set by a potentiometer. An LCD shows the current reading and setpoint, and the loop logs over serial for tuning.</p>
+        <article class="project-card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <span class="card-tag">Sheet 01</span>
+              <h3>Closed-Loop Thermal Fan Controller</h3>
+              <p class="card-summary">A fan controller that reads ambient temperature and holds it to a setpoint, built the way an HVAC system would be.</p>
               <div class="tags">
                 <span>Arduino</span><span>C++</span><span>Closed-loop control</span><span>Embedded systems</span>
               </div>
-              <a class="sheet-link" href="https://github.com/BadisMami/thermal-fan-controller" target="_blank" rel="noopener">View repository &rarr;</a>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-media" aria-hidden="true">
+                <span>Closed-Loop Thermal Fan Controller</span>
+              </div>
+              <a class="card-link" href="https://github.com/BadisMami/thermal-fan-controller" target="_blank" rel="noopener">View repository &rarr;</a>
             </div>
           </div>
-        </div>
-      </article>
+          <button type="button" class="card-flip-btn" aria-pressed="false" aria-label="Flip card to show the repository link for Closed-Loop Thermal Fan Controller">Flip</button>
+        </article>
 
-      <article class="sheet">
-        <button class="sheet-toggle" id="toggle-02" aria-expanded="false" aria-controls="more-02">
-          <span class="sheet-num">Sheet 02</span>
-          <span class="sheet-chevron" aria-hidden="true"></span>
-        </button>
-        <div class="sheet-body">
-          <h3>Cat vs. Dog Image Classifier</h3>
-          <p class="sheet-summary">A convolutional neural network trained from scratch to tell cats from dogs, with no pretrained weights.</p>
-          <div class="sheet-more" id="more-02">
-            <div class="sheet-more-inner">
-              <p class="sheet-detail">Built in PyTorch on a two-conv-layer architecture with data augmentation, currently reaching 84% test accuracy. The constraint is deliberate: get there without transfer learning, then push past 88%.</p>
+        <article class="project-card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <span class="card-tag">Sheet 02</span>
+              <h3>Cat vs. Dog Image Classifier</h3>
+              <p class="card-summary">A convolutional neural network trained from scratch to tell cats from dogs, with no pretrained weights.</p>
               <div class="tags">
                 <span>PyTorch</span><span>CNN</span><span>Computer vision</span>
               </div>
-              <a class="sheet-link" href="https://github.com/BadisMami/cat-dog-classifier" target="_blank" rel="noopener">View repository &rarr;</a>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-media" aria-hidden="true">
+                <span>Cat vs. Dog Image Classifier</span>
+              </div>
+              <a class="card-link" href="https://github.com/BadisMami/cat-dog-classifier" target="_blank" rel="noopener">View repository &rarr;</a>
             </div>
           </div>
-        </div>
-      </article>
+          <button type="button" class="card-flip-btn" aria-pressed="false" aria-label="Flip card to show the repository link for Cat vs. Dog Image Classifier">Flip</button>
+        </article>
 
-      <article class="sheet" id="sheet-03">
-        <button class="sheet-toggle" id="toggle-03" aria-expanded="false" aria-controls="more-03">
-          <span class="sheet-num">Sheet 03</span>
-          <span class="sheet-chevron" aria-hidden="true"></span>
-        </button>
-        <div class="sheet-body">
-          <h3>GO FSU Scrolling Display</h3>
-          <p class="sheet-summary">A Verilog project that scrolls "GO FSU" across a DE1-SoC board's seven-segment displays. See the live recreation above.</p>
-          <div class="sheet-more" id="more-03">
-            <div class="sheet-more-inner">
-              <p class="sheet-detail">Built from four modules (a clock divider, a finite state machine, a message ROM mapping frame number to character, and a display driver), written and simulated in Quartus Prime.</p>
+        <article class="project-card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <span class="card-tag">Sheet 03</span>
+              <h3>GO FSU Scrolling Display</h3>
+              <p class="card-summary">A Verilog project that scrolls "GO FSU" across a DE1-SoC board's seven-segment displays.</p>
               <div class="tags">
                 <span>Verilog</span><span>FPGA</span><span>Digital logic</span>
               </div>
-              <a class="sheet-link" href="https://github.com/BadisMami/go-fsu-fsm" target="_blank" rel="noopener">View repository &rarr;</a>
+            </div>
+            <div class="card-face card-back">
+              <div class="sevenseg-display" aria-hidden="true">
+                <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
+                <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
+                <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
+                <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
+                <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
+                <div class="digit"><span class="seg seg-a"></span><span class="seg seg-b"></span><span class="seg seg-c"></span><span class="seg seg-d"></span><span class="seg seg-e"></span><span class="seg seg-f"></span><span class="seg seg-g"></span></div>
+              </div>
+              <div class="sevenseg-controls">
+                <button type="button" id="sevenseg-toggle" aria-label="Pause display">Pause</button>
+                <a class="card-link" href="https://github.com/BadisMami/go-fsu-fsm" target="_blank" rel="noopener">View repository &rarr;</a>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+          <button type="button" class="card-flip-btn" aria-pressed="false" aria-label="Flip card to show a live recreation of the GO FSU display and its repository link">Flip</button>
+        </article>
 
-      <article class="sheet">
-        <button class="sheet-toggle" id="toggle-04" aria-expanded="false" aria-controls="more-04">
-          <span class="sheet-num">Sheet 04</span>
-          <span class="sheet-chevron" aria-hidden="true"></span>
-        </button>
-        <div class="sheet-body">
-          <h3>LMS: Course Platform</h3>
-          <p class="sheet-summary">A full-stack, Canvas-style course platform built solo across seven sprints for FSU's COP4870.</p>
-          <div class="sheet-more" id="more-04">
-            <div class="sheet-more-inner">
-              <p class="sheet-detail">C#, .NET, and MAUI on the front end, ASP.NET Core and hand-rolled ADO.NET over SQL Server on the back. Supports quizzes, gradebook export, assignment import/export, and comment threads, with a CLI and full MVVM desktop UI.</p>
+        <article class="project-card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <span class="card-tag">Sheet 04</span>
+              <h3>LMS: Course Platform</h3>
+              <p class="card-summary">A full-stack, Canvas-style course platform built solo across seven sprints for FSU's COP4870.</p>
               <div class="tags">
                 <span>C#</span><span>.NET</span><span>MAUI</span><span>SQL Server</span>
               </div>
-              <span class="sheet-link sheet-private">Private repository</span>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-media" aria-hidden="true">
+                <span>LMS: Course Platform</span>
+              </div>
+              <span class="card-link card-link-private">Private repository</span>
             </div>
           </div>
-        </div>
-      </article>
+          <button type="button" class="card-flip-btn" aria-pressed="false" aria-label="Flip card to show repository status for LMS Course Platform">Flip</button>
+        </article>
 
-      <article class="sheet">
-        <button class="sheet-toggle" id="toggle-05" aria-expanded="false" aria-controls="more-05">
-          <span class="sheet-num">Sheet 05</span>
-          <span class="sheet-chevron" aria-hidden="true"></span>
-        </button>
-        <div class="sheet-body">
-          <h3>Lacrosse Ball Tracker</h3>
-          <p class="sheet-summary">A computer vision tracker that follows a lacrosse ball frame by frame, using classic vision rather than ML.</p>
-          <div class="sheet-more" id="more-05">
-            <div class="sheet-more-inner">
-              <p class="sheet-detail">Uses HSV color masking and contour detection in OpenCV to isolate and track the ball through gameplay footage, frame over frame.</p>
+        <article class="project-card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <span class="card-tag">Sheet 05</span>
+              <h3>Lacrosse Ball Tracker</h3>
+              <p class="card-summary">A computer vision tracker that follows a lacrosse ball frame by frame, using classic vision rather than ML.</p>
               <div class="tags">
                 <span>Python</span><span>OpenCV</span><span>Computer vision</span>
               </div>
-              <a class="sheet-link" href="https://github.com/BadisMami/lacrosse-tracker" target="_blank" rel="noopener">View repository &rarr;</a>
+            </div>
+            <div class="card-face card-back">
+              <div class="card-media" aria-hidden="true">
+                <span>Lacrosse Ball Tracker</span>
+              </div>
+              <a class="card-link" href="https://github.com/BadisMami/lacrosse-tracker" target="_blank" rel="noopener">View repository &rarr;</a>
             </div>
           </div>
-        </div>
-      </article>
+          <button type="button" class="card-flip-btn" aria-pressed="false" aria-label="Flip card to show the repository link for Lacrosse Ball Tracker">Flip</button>
+        </article>
 
+      </div>
     </div>
   </section>
 
