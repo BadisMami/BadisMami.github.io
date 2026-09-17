@@ -309,7 +309,8 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .title-block { animation: none; opacity: 1; }
+  .title-block,
+  .hero-photo img { animation: none; opacity: 1; }
   html { scroll-behavior: auto; }
 }
 
