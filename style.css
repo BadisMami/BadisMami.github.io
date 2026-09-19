@@ -314,72 +314,6 @@ header, main, footer { position: relative; z-index: 1; }
   padding: 4px 12px;
 }
 
-/* ---- Seven-segment display (GO FSU card back) ---- */
-
-.sevenseg-display {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  padding: 16px 10px;
-  background: var(--bg);
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  margin-bottom: 16px;
-}
-
-.digit {
-  position: relative;
-  width: 22px;
-  height: 38px;
-  flex-shrink: 0;
-}
-
-.seg {
-  position: absolute;
-  background: var(--rule-soft);
-  border-radius: 1px;
-  transition: background 0.1s ease, box-shadow 0.1s ease;
-}
-
-.seg-a { top: 0;    left: 3px;  width: 16px; height: 4px; }
-.seg-g { top: 17px; left: 3px;  width: 16px; height: 4px; }
-.seg-d { top: 34px; left: 3px;  width: 16px; height: 4px; }
-.seg-f { top: 3px;  left: 0;    width: 4px;  height: 14px; }
-.seg-e { top: 20px; left: 0;    width: 4px;  height: 14px; }
-.seg-b { top: 3px;  left: 19px; width: 4px;  height: 14px; }
-.seg-c { top: 20px; left: 19px; width: 4px;  height: 14px; }
-
-.seg.on {
-  background: var(--accent);
-  box-shadow: 0 0 6px var(--accent-glow);
-}
-
-.sevenseg-controls {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 14px;
-}
-
-.sevenseg-controls button {
-  font-family: var(--font-head);
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  color: var(--ink);
-  background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-  padding: 6px 14px;
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.sevenseg-controls button:hover,
-.sevenseg-controls button:focus-visible {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
 /* ---- Footer ---- */
 
 .site-footer {
@@ -450,8 +384,7 @@ a:focus-visible, button:focus-visible {
     transform: rotateY(180deg);
   }
 
-  .card-media,
-  .sevenseg-display {
+  .card-media {
     flex: 1;
   }
 
